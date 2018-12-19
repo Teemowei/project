@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../scripts/libs/require.js" data-main="index.js"></script>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../static/iconfont/iconfont.css" />
+  </head>
+  <body>
+    <!-- ==================== 导航电梯 ==================== -->
+    <ul class="zbxf">
+      <li><span class="active">新品</span></li>
+      <li><span>套件</span></li>
+      <li><span>婚庆</span></li>
+      <li><span>被子</span></li>
+      <li><span>枕芯</span></li>
+      <li><span>家居</span></li>
+      <li><span>毯子</span></li>
+      <li><span>床垫</span></li>
+    </ul>
+    <!-- ==================== 页头 ==================== -->
+    <div class="heard" id="maodian">
+      <div class="top">
+        <div class="top_nav">
+          <ul class="top-l" class="clear">
+            <li class="top-l-l">
+              Hi，欢迎来到LOVO家纺！ <a href="#">请先登录</a> /
+              <a href="#">注册</a>
+            </li>
+            <li class="top-l-r"><a href="#" class="abtn">签到</a></li>
+          </ul>
+          <ul class="top-r" class="clear">
+            <li class="first">
+              <a href="#">我的LOVO</a>
+              <ul class="clear">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">优惠券/红包</a></li>
+                <li><a href="#">我的乐币</a></li>
+                <li><a href="#">礼品领取</a></li>
+              </ul>
+            </li>
+            <li><a href="#">会员中心</a></li>
+            <li><a href="#">网站联盟</a></li>
+            <li class="last">
+              <a href="#">
+                <span class="iconfont icon-gouwuche"></span> 购物车
+                <b class="shuliang">0</b> 件
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="search clear">
+        <div class="logo">
+          <a href="#"> <img src="../static/images/LOGOcunjie.gif" alt="" /> </a>
+        </div>
+        <div class="sousuo">
+          <div class="kuannei">
+            <span class="iconfont icon-sousuo"></span>
+            <input type="text" class="sstxt" id="txtsearch" />
+            <div class="XLK"></div>
+            <button class="btn_sousuo" id="subsearch">搜索</button>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <div class="nav_nb clear">
+          <div class="sysp showlb">
+            <a href="#"> <div class="syspn">所有商品</div> </a>
+            <ul class="xiala">
+              <li>
+                <a href="#">套件系列 </a>
+                <ul>
+                  <li><a href="#">浪漫婚庆系列 </a></li>
+                  <li><a href="#">优雅田园系列 </a></li>
+                  <li><a href="#">美式时尚系列 </a></li>
+                  <li><a href="#">高档奢华系列 </a></li>
+                  <li><a href="#">儿童卡通系列 </a></li>
+                  <li><a href="#">单拆件 </a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">芯类系列 </a>
+                <ul>
+                  <li><a href="#">被芯系列 </a></li>
+                  <li><a href="#">枕芯系列 </a></li>
+                  <li><a href="#">床垫系列 </a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">毯类系列 </a>
+                <ul>
+                  <li><a href="#">珊瑚绒毯 </a></li>
+                  <li><a href="#">拉舍尔毯 </a></li>
+                  <li><a href="#">其它毯 </a></li>
+                  <li><a href="#">法兰绒毯 </a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">夏令系列 </a>
+                <ul>
+                  <li><a href="#">夏被 </a></li>
+                  <li><a href="#">席类 </a></li>
+                  <li><a href="#">夏凉枕 </a></li>
+                  <li><a href="#">凉靠垫/坐垫 </a></li>
+                  <li><a href="#">蚊帐 </a></li>
+                </ul>
+              </li>
+              <li><a href="#">定制系列 </a></li>
+              <li>
+                <a href="#">家居系列 </a>
+                <ul>
+                  <li><a href="#">毛浴巾 </a></li>
+                  <li><a href="#">家居鞋服 </a></li>
+                  <li><a href="#">靠垫/抱枕 </a></li>
+                  <li><a href="#">健康监测/其它 </a></li>
+                  <li><a href="#">餐厨用品 </a></li>
+                  <li><a href="#">卫浴用品</a></li>
+                  <li><a href="#">家饰摆件</a></li>
+                  <li><a href="#">居家日用</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <ul class="nav-r clear">
+            <li><a href="#" title="首页">首页</a></li>
+            <li>
+              <a href="http://www.lovo.cn/activity/1154.htm" title="迪士尼馆"
+                >迪士尼馆</a
+              >
+              <div class="dsng clear">
+                <div class="dsng-l">
+                  <a
+                    href="http://www.lovo.cn/activity/1154.htm"
+                    title="迪士尼专区"
+                  >
+                    <img
+                      src="https://pic2.51lovo.com/upfiles/advertising_img/lovo/201605271033025611.jpg"
+                  /></a>
+                </div>
+                <div class="dsng-r">
+                  LOVO将迪士尼经典卡通元素与美国的个性精神完美融合，通过各种艺术的表现方式，将快乐、梦幻、时尚、个性的品牌调性进行了概括，提炼和升华，并以此来完美诠释年轻一代的独特个性。迪士尼的套件、芯类、床护垫等每款产品都在诉说一个快乐的故事……，并伴随着一代又一代的青少年健康成长。
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="https://www.lovo.cn/c-1413.shtm" title="时尚家居用品"
+                >时尚家居用品</a
+              >
+              <div class="dsng clear">
+                <div class="dsng-l">
+                  <a
+                    href="https://www.lovo.cn/c-1413.shtm"
+                    title="时尚家居用品"
+                  >
+                    <img
+                      src="https://pic2.51lovo.com/upfiles/advertising_img/lovo/201507271306125778.jpg"
+                  /></a>
+                </div>
+                <div class="dsng-r">
+                  LOVO时尚家居，妆点温馨!
+                  在LOVO时尚家居馆，您拥有的不只是商品，更是家的温暖！这些时尚小物，让做家务的过程变得有趣而不再单调；让拥挤的环境变得更加整洁；让居家时光，阳光蔓延更加温暖！
+                </div>
+              </div>
+            </li>
+            <li>
+              <a
+                href="http://www.lovo.cn/s2_0_k_0-90000:84_1_1.shtm"
+                title="尚玛可品牌馆"
+                >尚玛可品牌馆</a
+              >
+              <div class="dsng clear">
+                <div class="dsng-l">
+                  <a
+                    href="http://www.lovo.cn/s2_0_k_0-90000:84_1_1.shtm"
+                    title="尚玛可品牌馆"
+                  >
+                    <img
+                      src="https://pic2.51lovo.com/upfiles/advertising_img/lovo/201505081530364565.jpg"
+                  /></a>
+                </div>
+                <div class="dsng-r">
+                  尚玛可SAINTMARC品牌成为追求时尚生活方式的象征。追求时尚、个性、简约、休闲的设计理念，将时尚的色彩和图案巧妙运用于纺织品，成为二十世纪最有代表性的时尚品牌之一。
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- ==================== 右边浮框 ==================== -->
+    <div class="ybfk">
+      <div class="ybfk-t">
+        <img
+          src="../static/images/icon2.png"
+          alt=""
+          class="icon2 kuangwai"
+          title="我的账户"
+        />
+        <div class="gwc">
+          <div class="gang"></div>
+          <div class="kuangwai cengji">
+            <img src="../static/images/icon3.png" alt="" class="icon3" />
+            购<br />物<br />车 <span class="gwc-shuliang">0</span>
+          </div>
+          <div class="gang"></div>
+        </div>
+        <img
+          src="../static/images/icon4.png"
+          alt=""
+          class="icon4 kuangwai"
+          title="优惠券"
+        />
+        <div class="kuangwai hpp">
+          <div>
+              <img
+              src="../static/images/icon5.png"
+              alt=""
+              class="icon5 kuangwai"
+              title="好评返现"
+            />
+          </div>
+          <div class="kuang haoping">
+            <img src="../static/images/gaoshi.jpg" alt="">
+            <i></i>
+          </div>
+        </div>
+        <div class="kuangwai kff">
+          <div>
+              <img
+              src="../static/images/icon6.png"
+              alt=""
+              class="icon6"
+              title="在线客服"
+            />
+          </div>
+          <div class="kuang kefu">
+            <img src="../static/images/rengong.png" alt="">
+            <i></i>
+          </div>
+
+        </div>
+        <img src="../static/images/icon1.png" alt="" class="icon1 kuangwai" />
+      </div>
+      <div class="ybfk-b">
+        <div class="kuangwai sjj">
+          <div>
+              <img src="../static/images/icon7.png" alt="" class="icon7" />
+          </div>
+          <div class="kuang shouji">
+            <img src="../static/images/shouji.png" alt="">
+            <i class="sji"></i>
+          </div>
+
+
+        </div>
+        <a href="#maodian"
+          ><img src="../static/images/icon8.png" alt="" class="icon8 kuangwai"
+        /></a>
+      </div>
+    </div>
+    <!-- ==================== 轮播图 ==================== -->
+    <div class="swiper-container lunbo">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" class="tt1">
+          <a
+            href="https://www.lovo.cn/activity/1609.htm"
+            class="t1"
+            alt="冬眠计划"
+            ><img src="../static/images/20181127175009245.jpg" title="冬眠计划"
+          /></a>
+        </div>
+        <div class="swiper-slide" class="tt2">
+          <a
+            href="https://www.lovo.cn/activity/1609.htm"
+            class="t2"
+            alt="LOVO家纺全新代言人"
+            ><img
+              src="../static/images/201811271607138400.jpg"
+              title="LOVO家纺全新代言人"
+          /></a>
+        </div>
+        <div class="swiper-slide" class="tt3">
+          <a
+            href="https://www.lovo.cn/activity/1609.htm"
+            class="t3"
+            alt="LOVO家纺男神代言人"
+            ><img
+              src="../static/images/201811271606498220.jpg"
+              title="LOVO家纺男神代言人"
+          /></a>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- ==================== 内容 ==================== -->
+    <div class="main">
+      <div class="mode1 clear"></div>
+      <div class="mode1 clear miaosha">
+        <div class="titler">
+          <div class="titler_cont">
+            <img
+              src="../static/images/miaosha.jpg"
+              alt=""
+              title="热门商品推荐"
+            />
+          </div>
+        </div>
+        <div class="miaosha-b">
+          <ul class="miaosha-b_cont msss">
+
+          </ul>
+        </div>
+      </div>
+      <div class="mode1 clear Louti" id="xp">
+        <div class="titler clear">
+          <div class="titler_cont1">
+            <a href="http://www.lovo.cn/c-1655.shtm" title="新品">
+              <img src="../static/images/201704201157567326.jpg" alt="新品"
+            /></a>
+          </div>
+          <div class="titler_cont2">
+            <a href="http://www.lovo.cn/c-1655.shtm" title="新品">
+              <span>▶ 查看更多新品</span></a
+            >
+          </div>
+        </div>
+        <div class="zq_cont">
+          <a href="https://www.lovo.cn/pr-15624.htm" title="特丽斯全棉夏被">
+            <img
+              src="../static/images/201704201157168784.jpg"
+              alt="特丽斯全棉夏被"
+              title="特丽斯全棉夏被"
+          /></a>
+        </div>
+        <ul class="zq_box">
+          
+        </ul>
+      </div>
+      <div class="mode1 clear Louti" id="tj">
+        <div class="titler clear">
+          <div class="titler_cont1">
+            <a href="http://www.lovo.cn/s2_1409_k__3_1.shtm" title="套件">
+              <img src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201502111621177997.jpg" alt="套件"
+            /></a>
+          </div>
+          <div class="titler_cont2">
+            <a href="http://www.lovo.cn/c-1655.shtm" title="套件">
+              <span>▶ 查看更多套件</span></a
+            >
+          </div>
+        </div>
+        <div class="zq_cont">
+          <a href="http://www.lovo.cn/search/k%E6%99%AE%E7%BD%97%E6%97%BA%E6%96%AF.shtm" title="普罗旺斯系列">
+            <img
+              src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201604200938062509.jpg"
+              alt="普罗旺斯系列"
+              title="普罗旺斯系列"
+          /></a>
+        </div>
+        <ul class="zq_box">
+        
+        </ul>
+      </div>
+      <div class="mode1 clear Louti" id="hq">
+        <div class="titler clear">
+          <div class="titler_cont1">
+            <a href="http://www.lovo.cn/c-1425.shtm" title="婚庆">
+              <img src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201502131003155295.jpg" alt="婚庆专区"
+            /></a>
+          </div>
+          <div class="titler_cont2">
+            <a href="http://www.lovo.cn/c-1655.shtm" title="婚庆专区">
+              <span>▶ 查看更多婚庆</span></a
+            >
+          </div>
+        </div>
+        <div class="zq_cont">
+          <a href="http://www.lovo.cn/s2_1425_k__3_1.shtm" title="婚庆">
+            <img
+              src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201607181619371509.jpg"
+              alt="婚庆"
+              title="婚庆"
+          /></a>
+        </div>
+        <ul class="zq_box">
+         
+        </ul>
+      </div>
+      <div class="mode1 clear Louti" id="bz">
+        <div class="titler clear">
+          <div class="titler_cont1">
+            <a href="http://www.lovo.cn/c-1431.shtm" title="被子">
+              <img src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201502131003476526.jpg" alt="被子"
+            /></a>
+          </div>
+          <div class="titler_cont2">
+            <a href="http://www.lovo.cn/c-1431.shtm" title="被子">
+              <span>▶ 查看更多被子</span></a
+            >
+          </div>
+        </div>
+        <div class="zq_cont">
+          <a href="http://www.lovo.cn/pr-14984.htm" title="蚕丝被推荐">
+            <img
+              src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201605130959061711.jpg"
+              alt="蚕丝被推荐"
+              title="蚕丝被推荐"
+          /></a>
+        </div>
+        <ul class="zq_box">
+  
+        </ul>
+      </div>
+      <div class="mode1 clear Louti" id="zx">
+        <div class="titler clear">
+          <div class="titler_cont1">
+            <a href="http://www.lovo.cn/c-1432.shtm" title="枕芯">
+              <img src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201502130958529950.jpg" alt="枕芯"
+            /></a>
+          </div>
+          <div class="titler_cont2">
+            <a href="http://www.lovo.cn/c-1432.shtm" title="枕芯">
+              <span>▶ 查看更多枕芯</span></a
+            >
+          </div>
+        </div>
+        <div class="zq_cont">
+          <a href="http://www.lovo.cn/c-1432.shtm" title="枕芯">
+            <img
+              src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201607270934282075.jpg"
+              alt="枕芯"
+              title="枕芯"
+          /></a>
+        </div>
+        <ul class="zq_box">
+        
+        </ul>
+      </div>
+      <div class="mode1 clear Louti" id="jj">
+        <div class="titler clear">
+          <div class="titler_cont1">
+            <a href="http://www.lovo.cn/c-1413.shtm" title="家居">
+              <img src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201502131005357868.jpg" alt="家居"
+            /></a>
+          </div>
+          <div class="titler_cont2">
+            <a href="http://www.lovo.cn/c-1413.shtm" title="家居">
+              <span>▶ 查看更多家居</span></a
+            >
+          </div>
+        </div>
+        <div class="zq_cont">
+          <a href="http://www.lovo.cn/pr-17775.htm" title="全棉浴巾">
+            <img
+              src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201609011045358779.jpg"
+              alt="全棉浴巾"
+              title="全棉浴巾"
+          /></a>
+        </div>
+        <ul class="zq_box">
+
+        </ul>
+      </div>
+      <div class="mode1 clear Louti" id="tz">
+        <div class="titler clear">
+          <div class="titler_cont1">
+            <a href="http://www.lovo.cn/s2_1412_k__3_1.shtm" title="毯子">
+              <img src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201502131002516750.jpg" alt="毯子"
+            /></a>
+          </div>
+          <div class="titler_cont2">
+            <a href="http://www.lovo.cn/s2_1412_k__3_1.shtm" title="毯子">
+              <span>▶ 查看更多毯子</span></a
+            >
+          </div>
+        </div>
+        <div class="zq_cont">
+          <a href="http://www.lovo.cn/pr-16571.htm" title="迪士尼毯子">
+            <img
+              src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201608021749458765.jpg"
+              alt="迪士尼毯子"
+              title="迪士尼毯子"
+          /></a>
+        </div>
+        <ul class="zq_box">
+
+        </ul>
+      </div>
+      <div class="mode1 clear Louti" id="cd">
+        <div class="titler clear">
+          <div class="titler_cont1">
+            <a href="http://www.lovo.cn/c-1433.shtm" title="床垫">
+              <img src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201502130951008251.jpg" alt="床垫"
+            /></a>
+          </div>
+          <div class="titler_cont2">
+            <a href="http://www.lovo.cn/c-1433.shtm" title="床垫">
+              <span>▶ 查看更多床垫</span></a
+            >
+          </div>
+        </div>
+        <div class="zq_cont">
+          <a href="http://www.lovo.cn/pr-13477.htm" title="柔梦床护垫">
+            <img
+              src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201609011129357678.jpg"
+              alt="柔梦床护垫"
+              title="柔梦床护垫"
+          /></a>
+        </div>
+        <ul class="zq_box">
+    
+        </ul>
+      </div>
+      <div class="mode1 clear zuihd">
+        <ul class="zuihoule">
+          <li>
+            <div class="shang">
+              <a
+                href="http://www.lovo.cn/s2_1409_k__3_1.shtm"
+                title="BEDDING KITS"
+              >
+                <img
+                  src="https://pic2.51lovo.com/upfiles/advertising_img/lovo/201505151633133407.png"
+                  title="BEDDING"
+              /></a>
+            </div>
+            <div class="dibuwenzi">
+              <a
+                href="http://www.lovo.cn/s2_1409_k__3_1.shtm"
+                title="BEDDING KITS"
+                >BEDDING KITS</a
+              >
+            </div>
+          </li>
+          <li>
+            <div class="shang">
+              <a
+                href="http://www.lovo.cn/s2_0_k__3_1.shtm"
+                title="NEW PRODUCTS"
+              >
+                <img
+                  src="https://pic2.51lovo.com/upfiles/advertising_img/lovo/201609061406109764.png"
+                  title="NEW"
+              /></a>
+            </div>
+            <div class="dibuwenzi">
+              <a
+                href="http://www.lovo.cn/s2_0_k__3_1.shtm"
+                title="NEW PRODUCTS"
+                >NEW PRODUCTS</a
+              >
+            </div>
+          </li>
+          <li>
+            <div class="shang">
+              <a
+                href="http://www.lovo.cn/c-1425.shtm"
+                title="BEDDING KITS"
+              >
+                <img
+                  src="https://pic2.51lovo.com/upfiles/advertising_img/lovo/201505151633378422.png"
+                  title="WEDDING"
+              /></a>
+            </div>
+            <div class="dibuwenzi">
+              <a
+                href="http://www.lovo.cn/c-1425.shtm"
+                title="WEDDING"
+                >WEDDING</a
+              >
+            </div>
+          </li>
+          <li>
+            <div class="shang">
+              <a
+                href="http://www.lovo.cn/c-1431.shtm"
+                title="QUILT"
+              >
+                <img
+                  src="https://pic2.51lovo.com/upfiles/advertising_img/lovo/201505151633491495.png"
+                  title="BEDDING"
+              /></a>
+            </div>
+            <div class="dibuwenzi">
+              <a
+                href="http://www.lovo.cn/c-1431.shtm"
+                title="QUILT"
+                >QUILT</a
+              >
+            </div>
+          </li>
+          <li class="last">
+            <div class="shang">
+              <a
+                href="https://www.lovo.cn/help/8.htm"
+                title="BRAND"
+              >
+                <img
+                  src="https://pic2.51lovo.com/upfiles/advertising_img/lovo/201810201651195560.jpg"
+                  title="BEDDING"
+              /></a>
+            </div>
+            <div class="dibuwenzi">
+              <a
+                href="https://www.lovo.cn/help/8.htm"
+                title="BRAND"
+                >BRAND</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ==================== 页尾 ==================== -->
+    <div class="buttom">
+      <div class="buttom-t">
+        <div class="buttom_cont">
+          <div class="buttom_logo"></div>
+          <div class="buttom-t-t clear">
+            <div class="butbox">
+              <div class="ico ico_gift"></div>
+              <div class="jiage">69</div>
+              <div class="jqianwz">
+                元即可<br />
+                免费配送
+              </div>
+            </div>
+            <div class="butbox">
+              <div class="ico ico_shsm"></div>
+              <div class="jiage">1200</div>
+              <div class="jqianwz">
+                个城市<br />
+                送货上门
+              </div>
+            </div>
+            <div class="butbox">
+              <div class="ico ico_gwc"></div>
+              <div class="jiage">7</div>
+              <div class="jqianwz">
+                天无理由<br />
+                退换货保障
+              </div>
+            </div>
+            <div class="butbox">
+              <div class="ico ico_kf"></div>
+              <div class="jqianwz">
+                客服热线<br />
+                021-60554933
+              </div>
+            </div>
+          </div>
+          <div class="buttom-t-b clear">
+            <ul class="list_list">
+              <li><span>新手指南</span></li>
+              <li><a href="#">注册新用户</a></li>
+              <li><a href="#">会员规则</a></li>
+              <li><a href="#">乐币规则</a></li>
+              <li><a href="#">礼品卡使用流程 </a></li>
+            </ul>
+            <ul class="list_list">
+              <li><span>如何付款/退款</span></li>
+              <li><a href="#">网站订购流程</a></li>
+              <li><a href="#">支付方式 </a></li>
+              <li><a href="#">如何办理退款</a></li>
+              <li><a href="#">发票制度说明 </a></li>
+            </ul>
+            <ul class="list_list">
+              <li><span>配送方式</span></li>
+              <li><a href="#">货到付款城市及配送时间 </a></li>
+              <li><a href="#">款到快递城市及配送时间 </a></li>
+              <li><a href="#">配送费收取标准及签收事项 </a></li>
+            </ul>
+            <ul class="list_list">
+              <li><span>售后服务</span></li>
+              <li><a href="#">退换货政策 </a></li>
+              <li><a href="#">如何办理退换货</a></li>
+              <li><a href="#">常见热点问题</a></li>
+              <li><a href="#">投诉与建议</a></li>
+            </ul>
+            <ul class="list_list">
+              <li><span>关于LOVO</span></li>
+              <li><a href="#">联系我们</a></li>
+              <li><a href="#">友情链接</a></li>
+              <li>
+                <a href="http://www.luolai.com/">罗莱家纺股份&</a
+                ><a href="http://www.luolaizs.com/">招商中心</a>
+              </li>
+              <li>
+                <a href="http://weibo.com/lovojiafang">LOVO家居官方微博</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="buttom-b">
+        <div class="buttom-b-t">
+          <div class="buttom-b-t-l">
+            <a href="#">关于LOVO</a> <a href="#">隐私条款</a>
+            <a href="http://cps.lovo.cn/">网站联盟</a>
+          </div>
+          <div class="buttom-b-t-r">
+            Copyright©2009-2016 lovo.cn All Rights Reserved
+            <a
+              href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action"
+              >沪ICP备05017226号-17</a
+            >
+            版权所有©上海罗莱家用纺织品有限公司
+          </div>
+        </div>
+        <div class="buttom-b-b clear">
+          <div class="iconfoot">
+            <a
+              class="footpic pic3"
+              onclick="javascript:window.open('https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=1atr5hendjiu231gryyzuyr06nhufi4tzcooar3dhbxs8vorpj')"
+            ></a
+            ><a
+              class="pic4"
+              href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202001053"
+              ><p>
+                <img src="../static/images/gaba.png" alt="" /> 沪公网安备
+                31011202001053号
+              </p></a
+            >
+          </div>
+          <div class="footlinks">
+            <a href="http://www.wed2008.com/"> 重庆婚庆公司 </a>
+            <a href="http://www.baixinger.com/"> 百姓网 </a>
+            <a href="http://www.r018.com/"> 爱上海论坛 </a>
+            <a href="http://www.anhospital.com/"> 唐朝网 </a>
+            <a href="http://www.fc3.cn/"> 黄山大众网 </a>
+            <a href="http://www.meilele.com/shipin/"> 美乐乐上海站 </a>
+            <a href="http://shenyang.youbian.com/"> 沈阳生活网 </a>
+            <a href="http://www.tex68.com/"> 家纺品牌 </a>
+            <a href="http://sh.daoxila.com/"> 婚宴酒店 </a>
+            <a href="http://www.bieshu.com/"> 别墅网 </a>
+            <a href="http://www.kjwang.com/"> 客家网 </a>
+            <a href="http://www.b8bj.com/"> 板式家具 </a>
+            <a href="http://so.jiameng.com/"> 品牌加盟 </a>
+            <a href="http://www.anjiala.com/"> 安家啦家居 </a>
+            <a href="http://www.daxi.com/"> 结婚网 </a>
+            <a href="http://beijing.pztuan.com/"> 北京团购 </a>
+            <a href="http://xm.xtuan.com/"> 厦门装修公司 </a>
+            <a href="http://www.51psw.com/"> 女性时尚 </a>
+            <a href="http://maichang.pchouse.com.cn/"> 家具卖场 </a>
+            <a href="http://home.nn.soufun.com/"> 南宁装修家居 </a>
+            <a href="http://www.c2qz.com/"> 中国墙纸网 </a>
+            <a href="http://www.7floor.cn/"> 南京影楼 </a>
+            <a href="http://www.pps.tv/"> PPS影音</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
