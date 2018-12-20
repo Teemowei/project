@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登入</title>
+    <script src="../scripts/libs/require.js" data-main="register.js"></script>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../styles/register.css" />
+    <link rel="stylesheet" href="../static/iconfont/iconfont.css" />
+</head>
+
+<body>
+
+    <!-- ==================== 页头 ==================== -->
+    <div class="yetou">
+        <div class="sousuo clear">
+            <div class="logo">
+                <a href="/index.htm">
+                    <img src="https://pic1.51lovo.com/upfiles/activity/lovo/PC/LOGOcunjie.gif">
+                </a>
+            </div>
+        </div>
+        <div class="nav"></div>
+    </div>
+
+    <!-- ==================== 内容 ==================== -->
+    <div id="content">
+        <div class="login-wrap">
+            <div class="w">
+                <div class="login-form">
+                    <div class="login-tab login-tab-r">
+                        <a id="SmsToLogin" href="javascript:void(0);" onclick="changeLoginTo(2)" class="" style="outline: rgb(109, 109, 109) none 0px;">
+                            短信快捷登录</a>
+                    </div>
+                    <div class="login-tab login-tab-l">
+                        <a id="UserNameToLogin" href="javascript:void(0);" onclick="changeLoginTo(1)" class="checked"
+                            style="outline: rgb(109, 109, 109) none 0px;">账户登录</a>
+                    </div>
+                    <div class="login-box" style="display: none;visibility: visible;" id="SmsToLoginDiv">
+                        <div class="mt tab-h">
+                        </div>
+                        <div class="msg-wrap">
+                            <div class="msg-warn" style="display: none;"><b></b>公共场所不建议自动登录，以防账号丢失</div>
+                            <div class="msg-error hide" style="display: none;"></div>
+                        </div>
+                        <div class="mc">
+                            <div class="form">
+                                <form>
+                                    <input style="display:none" name="logphonenum">
+                                    <input style="display:none" name="smslogimgcheck">
+                                    <input style="display:none" name="smsValiCode">
+                                    <div class="item item-fore1">
+                                        <label id="logphonenum_info" class="login-label name-label"></label>
+                                        <input id="logphonenum" type="text" class="itxt" tabindex="1" autocomplete="off"
+                                            placeholder="已验证手机">
+                                        <span id="clear-btn-logphonenum" class="clear-btn" style="display: none;"
+                                            onclick="clearInput('logphonenum')"></span>
+                                    </div>
+                                    <div id="o-authcode" class="item item-vcode item-fore3   " name="smslogimgcheck">
+                                        <input id="smslogimgcheck" type="text" class="itxt itxt02" tabindex="3"
+                                            placeholder="图形验证码">
+                                        <img id="txtImageCheck2" class="verify-code" src="/passport/getLoginVCode.php"
+                                            onclick="return changeloginCode(this);">
+                                        <a onclick="return changeloginCode('#txtImageCheck2');">看不清换一张</a>
+                                    </div>
+                                    <div id="entry" class="item item-fore2" style="visibility: visible;">
+                                        <label class="login-label pwd-label" for="nloginpwd"></label>
+                                        <input id="smsValiCode" name="smsValiCode" type="text" class="itxt itxt02"
+                                            tabindex="2" autocomplete="off" placeholder="动态密码">
+                                        <input id="sendCodeBtn" type="button" class="itxt itxt03" tabindex="2" value="获取动态密码"
+                                            onclick="return getPhoneCode();">
+                                        <span class="capslock" style="display: none;"><b></b>大小写锁定已打开</span>
+                                    </div>
+                                    <div class="item item-fore5">
+                                        <div class="login-btn">
+                                            <a id="click_login_main_b" href="javascript:void(0);" onclick="clickLoginMain(2);"
+                                                class="btn-img btn-entry" tabindex="6">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-box" style="display: block;visibility: visible;" id="UserNameToLoginDiv">
+                        <div class="mt tab-h">
+                        </div>
+                        <div class="msg-wrap">
+                            <div class="msg-warn" style="display: none;"><b></b>公共场所不建议自动登录，以防账号丢失</div>
+                            <div class="msg-error hide" style="display: none;"><b></b></div>
+                        </div>
+                        <div class="mc">
+                            <div class="form">
+                                <form>
+                                    <input style="display:none" name="logusername">
+                                    <div class="item item-fore1">
+                                        <label class="login-label name-label"></label>
+                                        <input id="logusername" nam="logusername" type="text" class="itxt" tabindex="1"
+                                            autocomplete="off" placeholder="用户名/已验证手机">
+                                        <span id="clear-btn-logusername" class="clear-btn" style="display: none;"
+                                            onclick="clearInput('logusername')"></span>
+                                    </div>
+                                    <div id="entry" class="item item-fore2" style="visibility: visible;">
+                                        <label class="login-label pwd-label" for="nloginpwd"></label>
+                                        <input id="logpassword" type="password" class="itxt itxt-error" tabindex="2"
+                                            autocomplete="off" placeholder="密码">
+                                        <span id="clear-btn-logpassword" class="clear-btn" style="display: none;"
+                                            onclick="clearInput('logpassword')"></span>
+                                        <span class="capslock" style="display: none;"><b></b>大小写锁定已打开</span>
+                                    </div>
+                                    <div id="yanzhengma" class="item item-vcode item-fore3  hide " style="display: none;">
+                                        <input id="logimageCheck" type="text" class="itxt itxt02" tabindex="3"
+                                            placeholder="图形验证码">
+                                        <img id="txtImageCheck" class="verify-code" src="/passport/getLoginVCode.php"
+                                            onclick="return changeloginCode(this);">
+                                        <a onclick="return changeloginCode('#txtImageCheck');">看不清换一张</a>
+                                    </div>
+                                    <div class="item item-fore4">
+                                        <div class="safe">
+                                            <span>
+                                            </span>
+                                            <span class="forget-pw-safe">
+                                                <a href="/passport/toFindPassword.php">忘记密码</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="item item-fore5">
+                                        <div class="login-btn">
+                                            <a id="click_login_main_a" href="javascript:void(0);" onclick="clickLoginMain(1);"
+                                                class="btn-img btn-entry" tabindex="6">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coagent" id="kbCoagent">
+                        <ul>
+                            <li>
+                                <b></b>
+                                <a id="union_passport_qqLogin" class="pdl"><b class="QQ-icon"></b><span>QQ</span></a>
+                                <span class="line"></span>
+                            </li>
+                            <li>
+                                <a id="union_passport_weibo" class="pdl"><b class="xinlang-icon"></b><span>微博</span></a>
+                                <span class="line"></span>
+                            </li>
+                            <li>
+                                <a id="union_passport_alipaylogin" class="pdl"><b class="zhifubao-icon"></b><span>支付宝</span></a>
+                                <span class="line"></span>
+                            </li>
+                            <li class="extra-r">
+                                <div class="regist-link" style="line-height:45px;">
+                                    <a href="/passport/toRegister.php" style="outline: rgb(109, 109, 109) none 0px;"><b></b>立即注册</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="LovoLoginEle101" class="login-banner">
+                <div>
+                    <a href="https://www.lovo.cn/" target="_blank">
+                        <div class="i-inner"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 页尾 ==================== -->
+    <div class="buttom">
+        <div class="buttom-t">
+            <div class="buttom_cont">
+                <div class="buttom_logo"></div>
+                <div class="buttom-t-t clear">
+                    <div class="butbox">
+                        <div class="ico ico_gift"></div>
+                        <div class="jiage">69</div>
+                        <div class="jqianwz">
+                            元即可<br />
+                            免费配送
+                        </div>
+                    </div>
+                    <div class="butbox">
+                        <div class="ico ico_shsm"></div>
+                        <div class="jiage">1200</div>
+                        <div class="jqianwz">
+                            个城市<br />
+                            送货上门
+                        </div>
+                    </div>
+                    <div class="butbox">
+                        <div class="ico ico_gwc"></div>
+                        <div class="jiage">7</div>
+                        <div class="jqianwz">
+                            天无理由<br />
+                            退换货保障
+                        </div>
+                    </div>
+                    <div class="butbox">
+                        <div class="ico ico_kf"></div>
+                        <div class="jqianwz">
+                            客服热线<br />
+                            021-60554933
+                        </div>
+                    </div>
+                </div>
+                <div class="buttom-t-b clear">
+                    <ul class="list_list">
+                        <li><span>新手指南</span></li>
+                        <li><a href="#">注册新用户</a></li>
+                        <li><a href="#">会员规则</a></li>
+                        <li><a href="#">乐币规则</a></li>
+                        <li><a href="#">礼品卡使用流程 </a></li>
+                    </ul>
+                    <ul class="list_list">
+                        <li><span>如何付款/退款</span></li>
+                        <li><a href="#">网站订购流程</a></li>
+                        <li><a href="#">支付方式 </a></li>
+                        <li><a href="#">如何办理退款</a></li>
+                        <li><a href="#">发票制度说明 </a></li>
+                    </ul>
+                    <ul class="list_list">
+                        <li><span>配送方式</span></li>
+                        <li><a href="#">货到付款城市及配送时间 </a></li>
+                        <li><a href="#">款到快递城市及配送时间 </a></li>
+                        <li><a href="#">配送费收取标准及签收事项 </a></li>
+                    </ul>
+                    <ul class="list_list">
+                        <li><span>售后服务</span></li>
+                        <li><a href="#">退换货政策 </a></li>
+                        <li><a href="#">如何办理退换货</a></li>
+                        <li><a href="#">常见热点问题</a></li>
+                        <li><a href="#">投诉与建议</a></li>
+                    </ul>
+                    <ul class="list_list">
+                        <li><span>关于LOVO</span></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">友情链接</a></li>
+                        <li>
+                            <a href="http://www.luolai.com/">罗莱家纺股份&</a><a href="http://www.luolaizs.com/">招商中心</a>
+                        </li>
+                        <li>
+                            <a href="http://weibo.com/lovojiafang">LOVO家居官方微博</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttom-b">
+            <div class="buttom-b-t">
+                <div class="buttom-b-t-l">
+                    <a href="#">关于LOVO</a> <a href="#">隐私条款</a>
+                    <a href="http://cps.lovo.cn/">网站联盟</a>
+                </div>
+                <div class="buttom-b-t-r">
+                    Copyright©2009-2016 lovo.cn All Rights Reserved
+                    <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">沪ICP备05017226号-17</a>
+                    版权所有©上海罗莱家用纺织品有限公司
+                </div>
+            </div>
+            <div class="buttom-b-b clear">
+                <div class="iconfoot">
+                    <a class="footpic pic3" onclick="javascript:window.open('https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=1atr5hendjiu231gryyzuyr06nhufi4tzcooar3dhbxs8vorpj')"></a><a
+                        class="pic4" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202001053">
+                        <p>
+                            <img src="../static/images/gaba.png" alt="" /> 沪公网安备
+                            31011202001053号
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

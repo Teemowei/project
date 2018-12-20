@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <script src="../scripts/libs/require.js" data-main="login.js"></script>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="stylesheet" href="../static/iconfont/iconfont.css" />
+</head>
+
+<body>
+    <!-- ==================== 页头 ==================== -->
+    <div class="yetou">
+        <div class="sousuo clear">
+            <div class="logo">
+                <a href="/index.htm">
+                    <img src="https://pic1.51lovo.com/upfiles/activity/lovo/PC/LOGOcunjie.gif">
+                </a>
+            </div>
+            <div class="have-account">
+                已有账号？
+                <a href="javascript:void(0);">请登录</a>
+            </div>
+        </div>
+        <div class="nav"></div>
+    </div>
+
+    <!-- ==================== 内容 ==================== -->
+    <div class="container w">
+        <div class="main clearfix" id="form-main">
+            <div class="reg-form fl">
+                <form action="" id="register-form" method="post" novalidate="">
+                    <input style="display:none" name="regName" class="regName">
+                    <div class="form-item form-item-account" id="form-item-account">
+                        <label>手　机　号</label>
+                        <input type="text" id="regusername" name="regName" class="field" autocomplete="off" maxlength="20"
+                            placeholder="您的账户名和登录名">
+                    </div>
+                    <div class="input-tip">
+                        <span id="regusername_info" class="error"></span>
+                    </div>
+                    <div class="form-item">
+                        <label>设 置 密 码</label>
+                        <input type="password" name="pwd" id="regpassword" class="field" autocomplete="off" maxlength="20"
+                            placeholder="建议至少使用两种字符组合">
+                        <div class="capslock-tip tips">大写已开启<b class="arrow"></b><b class="arrow-inner"></b></div>
+                    </div>
+                    <div class="input-tip">
+                        <span id="regpassword_info" class="error"></span>
+                    </div>
+                    <div class="form-item">
+                        <label>确 认 密 码</label>
+                        <input type="password" name="pwdRepeat" id="regpassword_again" class="field" placeholder="请再次输入密码"
+                            maxlength="20">
+                        <i class="i-status"></i>
+                        <div class="capslock-tip tips">大写已开启<b class="arrow"></b><b class="arrow-inner"></b></div>
+                        <div class="capslock-tip tips">大写已开启<b class="arrow"></b><b class="arrow-inner"></b></div>
+                    </div>
+                    <div class="input-tip">
+                        <span id="regpassword_again_info" class="error"></span>
+                    </div>
+                    <div class="form-item form-item-authcode">
+                        <label>验　证　码</label>
+                        <input type="text" autocomplete="off" name="authCode" id="regimageCheck" maxlength="6" class="field form-authcode"
+                            placeholder="请输入验证码">
+                        <img class="img-code" src="/passport/getRegisterVCode.php" id="txtImageCheck" title="换一换"
+                            onclick="return changeRegCode(this);">
+                    </div>
+                    <div class="input-tip">
+                        <span id="regimageCheck_info" class="error"></span>
+                    </div>
+                    <div class="form-item form-item-phonecode">
+                        <label>手机验证码</label>
+                        <input type="text" name="mobileCode" maxlength="6" id="phoneValiCode" class="field phonecode"
+                            placeholder="请输入手机验证码" autocomplete="off">
+                        <input id="sendCodeBtn" class="btn-phonecode" type="button" value="获取验证码" onclick="return getPhoneCode();">
+                    </div>
+                    <div class="input-tip">
+                        <span id="regphoneValiCode_info" class="error"></span>
+                    </div>
+                    <div class="form-agreen">
+                        <div>
+                            <input type="checkbox" name="agreen" checked="checked" id="regtxtAgree">
+                            我已阅读并同意
+                            <a href="/www.lovo.cn/help/3.htm" id="protocol">《LOVO官方网站服务协议》</a>
+                        </div>
+                        <div class="input-tip">
+                            <span id="regagree_info" class="error"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" style="cursor:pointer;" class="btn-register" onclick="return clickRegister();"
+                            value="立即注册">
+                    </div>
+                </form>
+            </div>
+            <div id="LovoRegistEle101" class="reg-other">
+                <a href="https://www.lovo.cn/index.htm" target="_blank">
+                    <img src="https://pic1.51lovo.com/upfiles/advertising_img/lovo/201809061526517675.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- ==================== 页尾 ==================== -->
+    <div class="buttom">
+        <div class="buttom-t">
+            <div class="buttom_cont">
+                <div class="buttom_logo"></div>
+                <div class="buttom-t-t clear">
+                    <div class="butbox">
+                        <div class="ico ico_gift"></div>
+                        <div class="jiage">69</div>
+                        <div class="jqianwz">
+                            元即可<br />
+                            免费配送
+                        </div>
+                    </div>
+                    <div class="butbox">
+                        <div class="ico ico_shsm"></div>
+                        <div class="jiage">1200</div>
+                        <div class="jqianwz">
+                            个城市<br />
+                            送货上门
+                        </div>
+                    </div>
+                    <div class="butbox">
+                        <div class="ico ico_gwc"></div>
+                        <div class="jiage">7</div>
+                        <div class="jqianwz">
+                            天无理由<br />
+                            退换货保障
+                        </div>
+                    </div>
+                    <div class="butbox">
+                        <div class="ico ico_kf"></div>
+                        <div class="jqianwz">
+                            客服热线<br />
+                            021-60554933
+                        </div>
+                    </div>
+                </div>
+                <div class="buttom-t-b clear">
+                    <ul class="list_list">
+                        <li><span>新手指南</span></li>
+                        <li><a href="#">注册新用户</a></li>
+                        <li><a href="#">会员规则</a></li>
+                        <li><a href="#">乐币规则</a></li>
+                        <li><a href="#">礼品卡使用流程 </a></li>
+                    </ul>
+                    <ul class="list_list">
+                        <li><span>如何付款/退款</span></li>
+                        <li><a href="#">网站订购流程</a></li>
+                        <li><a href="#">支付方式 </a></li>
+                        <li><a href="#">如何办理退款</a></li>
+                        <li><a href="#">发票制度说明 </a></li>
+                    </ul>
+                    <ul class="list_list">
+                        <li><span>配送方式</span></li>
+                        <li><a href="#">货到付款城市及配送时间 </a></li>
+                        <li><a href="#">款到快递城市及配送时间 </a></li>
+                        <li><a href="#">配送费收取标准及签收事项 </a></li>
+                    </ul>
+                    <ul class="list_list">
+                        <li><span>售后服务</span></li>
+                        <li><a href="#">退换货政策 </a></li>
+                        <li><a href="#">如何办理退换货</a></li>
+                        <li><a href="#">常见热点问题</a></li>
+                        <li><a href="#">投诉与建议</a></li>
+                    </ul>
+                    <ul class="list_list">
+                        <li><span>关于LOVO</span></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">友情链接</a></li>
+                        <li>
+                            <a href="http://www.luolai.com/">罗莱家纺股份&</a><a href="http://www.luolaizs.com/">招商中心</a>
+                        </li>
+                        <li>
+                            <a href="http://weibo.com/lovojiafang">LOVO家居官方微博</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttom-b">
+            <div class="buttom-b-t">
+                <div class="buttom-b-t-l">
+                    <a href="#">关于LOVO</a> <a href="#">隐私条款</a>
+                    <a href="http://cps.lovo.cn/">网站联盟</a>
+                </div>
+                <div class="buttom-b-t-r">
+                    Copyright©2009-2016 lovo.cn All Rights Reserved
+                    <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">沪ICP备05017226号-17</a>
+                    版权所有©上海罗莱家用纺织品有限公司
+                </div>
+            </div>
+            <div class="buttom-b-b clear">
+                <div class="iconfoot">
+                    <a class="footpic pic3" onclick="javascript:window.open('https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=1atr5hendjiu231gryyzuyr06nhufi4tzcooar3dhbxs8vorpj')"></a><a
+                        class="pic4" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202001053">
+                        <p>
+                            <img src="../static/images/gaba.png" alt="" /> 沪公网安备
+                            31011202001053号
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

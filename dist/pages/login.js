@@ -1,0 +1,1 @@
+"use strict";require(["../scripts/config.js"],function(){require(["common","jquery","swiper","bootstrap"],function(r,i,e,o){})});

@@ -1,0 +1,720 @@
+@import "public";
+
+html {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    width: 100%;
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0px auto;
+        padding: 0px;
+        font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+        color: #4c4c4c;
+        overflow-x: hidden;
+
+        .clear {
+            clear: both;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 12px;
+            color: #000;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        //==================== 页头 ====================
+        div.yetou {
+            background: #fff;
+
+            div.sousuo {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 30px 0;
+
+                div.logo {
+                    float: left;
+                    width: 41.81%;
+                }
+            }
+
+            div.nav {
+                line-height: 25px;
+                border-bottom: 2px #454b52 solid;
+            }
+        }
+
+        //==================== 内容 ====================
+        div#content {
+            clear: both;
+            a:hover{
+                color: #e4393c !important;
+                text-decoration: none;
+            }
+            div.login-wrap {
+                position: relative;
+                height: 500px;
+                margin: 0;
+                z-index: 5;
+
+                div.w {
+                    width: 990px;
+                    margin: 0 auto;
+
+                    div.login-form {
+                        float: right;
+                        top: 40px;
+                        right: 0px;
+                        position: relative;
+                        z-index: 4;
+                        background: #fff;
+                        overflow: visible;
+                        width: 346px;
+
+                        .msg-wrap {
+                            min-height: 23px;
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                            height: auto!important;
+                        }
+
+                        div.login-tab {
+                            height: 54px;
+                            font-size: 18px;
+                            font-family: "microsoft yahei";
+                            text-align: center;
+                            border-bottom: 1px solid #f4f4f4;
+                            position: absolute;
+                            background: #fff;
+                            display: block;
+
+                            a {
+                                width: 99%;
+                                height: 18px;
+                                position: absolute;
+                                left: 0;
+                                font-size: 18px;
+                                top: 18px;
+                                border-right: 1px solid #f4f4f4;
+                                text-decoration: none;
+                                &:hover{
+                                    font-weight: 700
+                                }
+                            }
+
+                            a.checked {
+                                font-weight: 700;
+                                color: #e4393c;
+                            }
+                        }
+
+                        div.login-box {
+                        
+                            padding: 20px;
+                            visibility: hidden;
+
+                            .safe {
+                                position: relative;
+                                color: #666;
+                                span {
+                                    margin-right: 15px;
+                                }
+                                .forget-pw-safe {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    margin: 0;
+                                }
+                            }
+
+                            div.mt {
+                                display: inline-block;
+                                display: block;
+                                width: 306px;
+                                overflow: visible;
+                                height: 27px;
+                            }
+                            .mt:after {
+                                content: ".";
+                                display: block;
+                                height: 0;
+                                clear: both;
+                                visibility: hidden;
+                            }
+                            .tab-h {
+                                height: 35px;
+                            }
+                            
+                            .login-btn {
+                                margin: 0 auto;
+                                height: 32px;
+                                width: 99%;
+                                position: relative;
+
+                                .btn-img {
+                                    border: 1px solid #454b52;
+                                    display: block;
+                                    width: 302px;
+                                    background: #454b52;
+                                    height: 31px;
+                                    line-height: 31px;
+                                    color: #fff;
+                                    font-size: 20px;
+                                    font-family: 'Microsoft YaHei';
+                                    text-align: center;
+                                    &:hover{
+                                        color: #fff !important;
+                                        background: #df0000;
+                                        border: 1px solid #df0000
+                                    }
+                                }
+                            }
+
+                            div.tab-h {
+                                height: 35px;
+                            }
+
+                            div.mc {
+                                overflow: visible;
+
+                                div.form {
+                                    form {
+                                        display: block;
+                                        margin-top: 0em;
+
+                                        img.verify-code {
+                                            cursor: pointer;
+                                            width: 90px;
+                                            height: 33px;
+                                            background: #ddd;
+                                            vertical-align: middle;
+
+                                        }
+
+                                        .item-vcode {
+                                            .verify-code {
+                                                float: left;
+                                            }
+
+                                            a {
+                                                display: inline-block;
+                                                width: 38px;
+                                                float: right;
+                                                color: #666;
+                                                text-decoration: none;
+                                            }
+                                        }
+
+                                        input.itxt {
+                                            line-height: 18px;
+                                            // height: 18px;
+                                            border: 0;
+                                            padding: 10px 0 10px 50px;
+                                            width: 304px;
+                                            float: none;
+                                            overflow: hidden;
+                                            font-size: 14px;
+                                            font-family: '\5b8b\4f53';
+                                        }
+
+                                        input.itxt02 {
+                                            padding: 10px 5px;
+                                            width: 150px;
+                                            text-align: center;
+                                        }
+
+                                        input.itxt03 {
+                                            padding: 0 !important;
+                                            width: 139px;
+                                            background: #ddd;
+                                            height: 34px;
+                                            line-height: 34px;
+                                            text-align: center;
+                                            cursor: pointer;
+                                            margin-right: 0 !important;
+                                        }
+
+                                        label {
+                                            float: none;
+                                            cursor: default;
+                                        }
+
+                                        div.item-fore1 {
+                                            z-index: 6;
+                                            border: 1px solid #bdbdbd;
+                                            // height: 38px;
+                                            width: 306px;
+
+                                            span.clear-btn {
+                                                position: absolute;
+                                                z-index: 20;
+                                                right: 6px;
+                                                top: 12px;
+                                                width: 14px;
+                                                height: 14px;
+                                                background: url(//pic1.51lovo.com/upfiles/activity/lovo/PC/pwd-icons-new.png) -25px -143px no-repeat;
+                                                cursor: pointer;
+                                                display: none;
+                                            }
+                                        }
+
+                                        div.item {
+                                            position: relative;
+                                            margin-bottom: 20px;
+                                            z-index: 1;
+                                            label.login-label {
+                                                position: absolute;
+                                                z-index: 3;
+                                                top: 0;
+                                                left: 0;
+                                                width: 38px;
+                                                height: 38px;
+                                                border-right: 1px solid #bdbdbd;
+                                                background: url(https://pic1.51lovo.com/upfiles/activity/lovo/PC/pwd-icons-new.png) no-repeat;
+                                            }
+                                            
+                                            label.name-label {
+                                                background-position: 0 0;
+                                            }
+
+                                            label.pwd-label {
+                                                background-position: -48px 0;
+                                            }
+
+                                        }
+
+                                        div#o-authcode.item {
+                                            border: 0;
+                                        }
+
+                                        div.item-fore3 {
+                                            z-index: 5;
+                                            margin-bottom: 13px;
+                                        }
+
+                                        div.item-fore2 {
+                                            border: 1px solid #bdbdbd;
+                                            // height: 38px;
+                                            width: 306px;
+
+                                            .capslock {
+                                                position: absolute;
+                                                z-index: 4;
+                                                display: none;
+                                                width: 106px;
+                                                top: 28px;
+                                                left: 50px;
+                                                padding-left: 26px;
+                                                height: 26px;
+                                                line-height: 28px;
+                                                overflow: hidden;
+                                                background: url(https://misc.360buyimg.com/user/passport/1.0.0/css/i/capslock.png) no-repeat;
+
+                                                b {
+                                                    display: block;
+                                                    position: absolute;
+                                                    top: 7px;
+                                                    left: 10px;
+                                                    width: 10px;
+                                                    height: 14px;
+                                                    overflow: hidden;
+                                                    background: url(https://pic1.51lovo.com/upfiles/activity/lovo/PC/pwd-icons-new.png) -104px -133px no-repeat;
+                                                }
+                                            }
+                                        }
+
+                                        div.item-fore5 {
+                                            margin-bottom: 10px;
+                                        }
+
+                                        input {
+                                            vertical-align: middle;
+                                            padding: 1px 0px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        div.msg-warn {
+                            position: relative;
+                            background: #fef4e5;
+                            color: #666;
+                            border: 1px solid #f6c090;
+                            padding: 3px 10px 3px 40px;
+                            line-height: 15px;
+                            height: auto;
+
+                            b {
+                                position: absolute;
+                                top: 50%;
+                                left: 10px;
+                                display: block;
+                                margin-top: -8px;
+                                width: 16px;
+                                height: 17px;
+                                overflow: hidden;
+                                background: url(https://pic1.51lovo.com/upfiles/activity/lovo/PC/pwd-icons-new.png) -104px -24px no-repeat;
+                            }
+                        }
+
+                        div.msg-error {
+                            position: relative;
+                            background: #ffebeb;
+                            color: #e4393c;
+                            border: 1px solid #faccc6;
+                            padding: 3px 10px 3px 40px;
+                            line-height: 15px;
+                            height: auto;
+                            b {
+                                position: absolute;
+                                top: 50%;
+                                left: 10px;
+                                display: block;
+                                margin-top: -8px;
+                                width: 16px;
+                                height: 16px;
+                                overflow: hidden;
+                                background: url(https://pic1.51lovo.com/upfiles/activity/lovo/PC/pwd-icons-new.png) -104px -49px no-repeat;
+                            }
+                        }
+
+                        div.msg-wrap {
+                            min-height: 23px;
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                            height: auto !important;
+                        }
+
+                        div.login-tab-r {
+                            right: 0;
+                            width: 173px;
+                        }
+
+                        div.login-tab-l {
+                            width: 173px;
+                        }
+
+                        div.coagent {
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            line-height: 50px;
+                            border-top: 1px solid #f4f4f4;
+                            height: auto;
+                            background-color: #fcfcfc;
+                            ul {
+                                display: block;
+                                li {
+                                    float: left;
+                                    b {
+                                        font-weight: bold;
+                                    }
+                                    a.pdl {
+                                        display: inline-block;
+                                        position: relative;
+                                        padding-left: 20px;
+                                        line-height: 50px;
+ 
+                                        b.xinlang-icon {
+                                            
+                                            width: 19px;
+                                            height: 18px;
+                                            display: block;
+                                            background: url(https://pic1.51lovo.com/upfiles/activity/lovo/PC/QQ-weixin.png?a=d) no-repeat;
+                                            margin: 0 auto;
+                                            position: absolute;
+                                            float: left;
+                                            left: 0;
+                                            top: 16px;
+                                            background-position: -20px 0;
+                                        }
+                                        b.QQ-icon {
+                                            background-position: 0 0;
+                                            width: 19px;
+                                            height: 18px;
+                                            display: block;
+                                            background: url(https://pic1.51lovo.com/upfiles/activity/lovo/PC/QQ-weixin.png?a=d) no-repeat;
+                                            margin: 0 auto;
+                                            position: absolute;
+                                            float: left;
+                                            left: 0;
+                                            top: 16px;
+                                        }
+                                        b.zhifubao-icon {
+                                            
+                                            width: 19px;
+                                            height: 18px;
+                                            display: block;
+                                            background: url(https://pic1.51lovo.com/upfiles/activity/lovo/PC/QQ-weixin.png?a=d) no-repeat;
+                                            margin: 0 auto;
+                                            position: absolute;
+                                            float: left;
+                                            left: 0;
+                                            top: 16px;
+                                            background-position: -40px 0;
+                                        }
+                                    }
+                                    .line {
+                                        color: #ccc;
+                                        padding: 0 4px;
+                                    }
+                                }
+                                li.extra-r {
+                                    float: right;
+                                    .regist-link {
+                                        color: #df0000;
+                                        float: right;
+                                        font-size: 14px;
+                                        a {
+                                            color: #df0000;
+                                            b {
+                                                display: inline-block;
+                                                width: 16px;
+                                                height: 16px;
+                                                overflow: hidden;
+                                                background: url(https://pic1.51lovo.com/upfiles/activity/lovo/PC/pwd-icons-new.png) -104px -75px no-repeat;
+                                                vertical-align: middle;
+                                                margin-right: 5px;
+                                                font-weight: bold;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            ul:after {
+                                content: ".";
+                                display: block;
+                                height: 0;
+                                clear: both;
+                                visibility: hidden;
+                            }
+                        }
+
+                    }
+                }
+
+                div.login-banner {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 500px;
+                    background: #fff;
+
+                    div {
+                        a {
+                            text-decoration: none;
+                            cursor: pointer;
+                            font-size: 12px;
+                            color: #000;
+
+                            div.i-inner {
+                                background: url(https://pic1.51lovo.com/upfiles/advertising_img/lovo/201809061527598459.jpg) center center no-repeat;
+                                position: relative;
+                                z-index: 3;
+                                height: 500px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //==================== 页尾 ====================
+        div.buttom {
+            background-color: #fff;
+            padding-top: 10px;
+            a:hover{
+                color: #000  !important;
+                text-decoration: none;
+            }
+            .ico {
+                display: block;
+                float: left;
+                background: url(//pic1.51lovo.com/upfiles/activity/lovo/PC/ico.png?a=b) no-repeat;
+            }
+            div.buttom-t {
+                border-top: 1px dashed #485d7a;
+
+                div.buttom_cont {
+                    width: 1000px;
+                    margin: 0 auto;
+                    background: none;
+                    position: relative;
+                    padding-bottom: 50px;
+
+                    div.buttom_logo {
+                        position: absolute;
+                        width: 115px;
+                        height: 80px;
+                        top: -10px;
+                        left: 0px;
+                        background: url(../static/images/bottom_logo.png);
+                    }
+
+                    div.buttom-t-t {
+                        padding-top: 24px;
+                        padding-left: 130px;
+
+                        div.butbox {
+                            float: left;
+                            padding: 0 31px;
+
+                            div.ico_gift {
+                                width: 35px;
+                                height: 35px;
+                                background-position: -71px -111px;
+                            }
+
+                            div.ico_shsm {
+                                width: 35px;
+                                height: 35px;
+                                margin-top: 7px;
+                                background-position: -0px -111px;
+                            }
+
+                            div.ico_gwc {
+                                width: 35px;
+                                height: 35px;
+                                margin-top: 5px;
+                                background-position: -37px -111px;
+                            }
+
+                            div.ico_kf {
+                                width: 35px;
+                                height: 35px;
+                                margin-top: 5px;
+                                background-position: -111px -111px;
+                            }
+
+                            div.jiage {
+                                color: #454b52;
+                                font-size: 32px;
+                                line-height: 150%;
+                                font-weight: 500;
+                                padding-left: 5px;
+                                float: left;
+                            }
+
+                            div.jqianwz {
+                                float: left;
+                                color: #454b52;
+                                padding: 7px 0 0 5px;
+                            }
+                        }
+                    }
+
+                    div.buttom-t-b {
+                        margin: 20px 0 0 0px !important;
+                        border-top: 1px dashed #ddd;
+                        padding: 20px 0 0 0px;
+
+                        ul.list_list {
+                            padding: 0px 40px 0px 40px;
+                            float: left;
+
+                            li {
+                                background: none;
+                                padding-left: 3px;
+                                line-height: 2em;
+                                color: #042148 !important;
+
+                                span {
+                                    font-size: 12px;
+                                    font-family: Verdana, simsun, Geneva, sans-serif;
+                                    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+                                }
+
+                                a {
+                                    color: #727483;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.buttom-b {
+                height: 50px;
+                border-top: 1px solid #861a26;
+                background-color: #ddd;
+
+                div.buttom-b-t {
+                    width: 1000px;
+                    margin: 0 auto;
+                    color: #959595;
+
+                    div.buttom-b-t-l {
+                        line-height: 50px;
+                        float: left;
+
+                        a {
+                            margin-right: 10px;
+                            color: #959595;
+                        }
+                    }
+
+                    div.buttom-b-t-r {
+                        line-height: 50px;
+                        float: right;
+
+                        a {
+                            color: #969696;
+                        }
+                    }
+                }
+
+                div.buttom-b-b {
+                    width: 1000px;
+                    margin: 0 auto;
+                    padding-top: 10px;
+
+                    div.iconfoot {
+                        float: left;
+                        width: 368px;
+                        padding-top: 10px;
+
+                        a.pic3 {
+                            width: 50px;
+                            height: 47px;
+                            background: url(../static/images/gaba.png) no-repeat center;
+                            background-size: 70% 70%;
+                            float: left;
+                            margin-right: 2px;
+                        }
+
+                        a.pic4 {
+                            display: inline-block;
+                            text-decoration: none;
+                            height: 20px;
+                            line-height: 20px;
+                            width: 118px;
+                            margin-top: 5px;
+
+                            p {
+                                float: left;
+                                height: 20px;
+                                line-height: 20px;
+                                margin: 0px 0px 0px 5px;
+                                color: #939393;
+
+                                img {
+                                    float: left;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
