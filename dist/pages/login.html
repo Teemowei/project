@@ -24,7 +24,7 @@
             </div>
             <div class="have-account">
                 已有账号？
-                <a href="javascript:void(0);">请登录</a>
+                <a href="register.html">请登录</a>
             </div>
         </div>
         <div class="nav"></div>
@@ -68,8 +68,9 @@
                         <label>验　证　码</label>
                         <input type="text" autocomplete="off" name="authCode" id="regimageCheck" maxlength="6" class="field form-authcode"
                             placeholder="请输入验证码">
-                        <img class="img-code" src="/passport/getRegisterVCode.php" id="txtImageCheck" title="换一换"
-                            onclick="return changeRegCode(this);">
+                        <span class="code"  title='点击切换'></span>
+                        <!-- <img class="img-code" src="/passport/getRegisterVCode.php" id="txtImageCheck" title="换一换"
+                            onclick="return changeRegCode(this);"> -->
                     </div>
                     <div class="input-tip">
                         <span id="regimageCheck_info" class="error"></span>

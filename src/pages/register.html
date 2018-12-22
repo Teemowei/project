@@ -33,11 +33,11 @@
             <div class="w">
                 <div class="login-form">
                     <div class="login-tab login-tab-r">
-                        <a id="SmsToLogin" href="javascript:void(0);" onclick="changeLoginTo(2)" class="" style="outline: rgb(109, 109, 109) none 0px;">
+                        <a id="SmsToLogin" href="javascript:void(0);"  class="" style="outline: rgb(109, 109, 109) none 0px;">
                             短信快捷登录</a>
                     </div>
                     <div class="login-tab login-tab-l">
-                        <a id="UserNameToLogin" href="javascript:void(0);" onclick="changeLoginTo(1)" class="checked"
+                        <a id="UserNameToLogin" href="javascript:void(0);"  class="checked"
                             style="outline: rgb(109, 109, 109) none 0px;">账户登录</a>
                     </div>
                     <div class="login-box" style="display: none;visibility: visible;" id="SmsToLoginDiv">
@@ -63,8 +63,9 @@
                                     <div id="o-authcode" class="item item-vcode item-fore3   " name="smslogimgcheck">
                                         <input id="smslogimgcheck" type="text" class="itxt itxt02" tabindex="3"
                                             placeholder="图形验证码">
-                                        <img id="txtImageCheck2" class="verify-code" src="/passport/getLoginVCode.php"
-                                            onclick="return changeloginCode(this);">
+                                        <span class="code"  title='点击切换'></span>
+                                        <!-- <img id="txtImageCheck2" class="verify-code" src=""
+                                            onclick="return changeloginCode(this);"> -->
                                         <a onclick="return changeloginCode('#txtImageCheck2');">看不清换一张</a>
                                     </div>
                                     <div id="entry" class="item item-fore2" style="visibility: visible;">
@@ -114,7 +115,7 @@
                                     <div id="yanzhengma" class="item item-vcode item-fore3  hide " style="display: none;">
                                         <input id="logimageCheck" type="text" class="itxt itxt02" tabindex="3"
                                             placeholder="图形验证码">
-                                        <img id="txtImageCheck" class="verify-code" src="/passport/getLoginVCode.php"
+                                        <img id="txtImageCheck" class="verify-code" src=""
                                             onclick="return changeloginCode(this);">
                                         <a onclick="return changeloginCode('#txtImageCheck');">看不清换一张</a>
                                     </div>
@@ -144,7 +145,7 @@
                                 <a id="union_passport_qqLogin" class="pdl"><b class="QQ-icon"></b><span>QQ</span></a>
                                 <span class="line"></span>
                             </li>
-                            <li>
+                            <li> 
                                 <a id="union_passport_weibo" class="pdl"><b class="xinlang-icon"></b><span>微博</span></a>
                                 <span class="line"></span>
                             </li>
@@ -154,7 +155,7 @@
                             </li>
                             <li class="extra-r">
                                 <div class="regist-link" style="line-height:45px;">
-                                    <a href="/passport/toRegister.php" style="outline: rgb(109, 109, 109) none 0px;"><b></b>立即注册</a>
+                                    <a href="login.html" style="outline: rgb(109, 109, 109) none 0px;"><b></b>立即注册</a>
                                 </div>
                             </li>
                         </ul>
@@ -276,7 +277,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>

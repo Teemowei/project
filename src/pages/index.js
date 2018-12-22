@@ -57,6 +57,7 @@ require(["../scripts/config.js"], function() {
         .removeClass("active");
     });
     //单击楼层导航，页面滚动到指定楼层
+    
     $(".zbxf li").click(function() {
       //改变楼层导航样式
       $(this)
@@ -85,7 +86,7 @@ require(["../scripts/config.js"], function() {
         "https://dms-dataapi.meizu.com/data/jsdata.jsonp?blockIds=233,266,267",
       dataType: "jsonp",
       success: function(data) {
-//===================渲染商品列表========================
+    //===================渲染商品列表========================
         var $list = data.block_266[0].node;
         var str = "";
         $.each($list, function(index, value) {
@@ -153,6 +154,7 @@ require(["../scripts/config.js"], function() {
       }
     });
 
+    //==============  ==============
 
 
   });

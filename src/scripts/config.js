@@ -4,6 +4,7 @@ requirejs.config({
         "jquery" : "libs/jquery.min",
         "swiper" : "libs/swiper.min",
         "bootstrap" : "libs/bootstrap",
-        "common" : "common"
+        "common" : "common",
+        "jquery.code":"libs/jquery.code"
     }
 })
